@@ -1,0 +1,26 @@
+:root {
+  --black: #141413;
+  --gold: #ffbf00;
+}
+
+body {
+  text-align: center;
+  background-color: var(--black);
+  color: var(--gold);
+}
+
+.homePage h1 {
+  font-size: 75px;
+}
+.homePage p {
+  font-size: larger;
+}
+
+nav a {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 25px;
+  text-align: end;
+}
