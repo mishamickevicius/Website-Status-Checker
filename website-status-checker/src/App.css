@@ -14,8 +14,19 @@ body {
 }
 .homePage p {
   font-size: larger;
+  margin-bottom: 5%;
 }
 
+.homePage a {
+  font-size: 40px;
+  padding: 20px;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.homePage a:hover {
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Add shadow on hover */
+}
 .navbar {
   background-color: var(--black);
   padding: 10px 20px;
@@ -36,4 +47,77 @@ nav a {
 
 nav a:hover {
   box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Add shadow on hover */
+}
+
+.signIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25%; /* Adjust the height as needed */
+}
+
+.signInBox {
+  width: 25%;
+  height: 20%;
+  background-color: var(--gold); /* Background color for the box */
+  padding: 20px; /* Padding around the box */
+  border-radius: 15px; /* Rounded corners */
+  text-align: center; /* Center align text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Adding margin for spacing between form and buttons */
+}
+
+.signInForm label {
+  margin-bottom: 5px; /* Adjust space between labels and inputs */
+  color: var(--black);
+  font-size: 35px;
+}
+
+.signInForm input {
+  text-align: center;
+  width: 75%;
+  height: 25px;
+  border: none;
+  color: var(--black);
+  margin-bottom: 10px; /* Adjust space between inputs */
+  border-radius: 10px;
+}
+
+.signInForm button {
+  margin-top: 10px;
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--black);
+  color: white;
+  font-size: 30px;
+}
+
+.signInForm button:hover {
+  cursor: pointer;
+}
+
+.googleBtn {
+  margin-top: 10px;
+  width: fit-content;
+  padding: 10px;
+  height: fit-content;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--black);
+  color: white;
+  font-size: 30px;
+}
+
+.googleBtn {
+  cursor: pointer;
 }
