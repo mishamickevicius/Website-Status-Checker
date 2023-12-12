@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { auth } from "./config/firebase";
+// import { auth } from "./config/firebase";
 import HomePage from "./components/Home";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";

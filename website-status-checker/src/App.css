@@ -16,11 +16,24 @@ body {
   font-size: larger;
 }
 
+.navbar {
+  background-color: var(--black);
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+}
+
 nav a {
-  margin-left: 20px;
-  margin-right: 20px;
   color: var(--gold);
   text-decoration: none;
-  font-size: 25px;
-  text-align: end;
+  margin-left: 15px; /* Adjust spacing between links */
+  transition: box-shadow 0.3s ease; /* Adding transition for the box-shadow */
+  font-size: 20px;
+}
+
+nav a:hover {
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Add shadow on hover */
 }
