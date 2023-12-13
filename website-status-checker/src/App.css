@@ -50,6 +50,7 @@ nav a:hover {
 }
 
 .signIn {
+  font-size: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,6 +59,7 @@ nav a:hover {
 }
 
 .signInBox {
+  font-size: 50px;
   width: 25%;
   height: 20%;
   background-color: var(--gold); /* Background color for the box */
@@ -89,6 +91,10 @@ nav a:hover {
   color: var(--black);
   margin-bottom: 10px; /* Adjust space between inputs */
   border-radius: 10px;
+  font-size: 20px;
+}
+.signInBox input:focus {
+  outline: none;
 }
 
 .signInForm button {
@@ -99,11 +105,13 @@ nav a:hover {
   border-radius: 10px;
   background-color: var(--black);
   color: white;
-  font-size: 30px;
+  font-size: 25px;
+  transition: box-shadow 0.3s ease; /* Adding transition for the box-shadow */
 }
 
 .signInForm button:hover {
   cursor: pointer;
+  box-shadow: 0 0 8px rgba(41, 41, 41, 0.3);
 }
 
 .googleBtn {
@@ -115,9 +123,11 @@ nav a:hover {
   border-radius: 10px;
   background-color: var(--black);
   color: white;
-  font-size: 30px;
+  font-size: 25px;
+  transition: box-shadow 0.3s ease;
 }
 
 .googleBtn {
   cursor: pointer;
+  box-shadow: 0 0 8px rgba(41, 41, 41, 0.3);
 }

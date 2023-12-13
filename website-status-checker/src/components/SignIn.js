@@ -27,6 +27,7 @@ const SignIn = () => {
     <>
       <Navbar />
       <div className="signIn">
+        <h2>Sign In</h2>
         <div className="signInBox">
           <form className="signInForm" onSubmit={signIn}>
             <label>Email: </label>

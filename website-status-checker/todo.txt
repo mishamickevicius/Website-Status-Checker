@@ -1,6 +1,8 @@
-Finish SignIn Form
+Finish SignIn Form -- Add Google Logo 
 
 Finish SignUp Form
+
+Finish Authentication 
 
 Finish API
 
