@@ -127,7 +127,84 @@ nav a:hover {
   transition: box-shadow 0.3s ease;
 }
 
-.googleBtn {
+.signUpBox {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+  width: 25%;
+  height: 20%;
+  background-color: var(--gold); /* Background color for the box */
+  padding: 20px; /* Padding around the box */
+  border-radius: 15px; /* Rounded corners */
+  text-align: center; /* Center align text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Adding margin for spacing between form and buttons */
+}
+
+.signUpForm label {
+  margin-bottom: 5px; /* Adjust space between labels and inputs */
+  color: var(--black);
+  font-size: 35px;
+}
+
+.signUpForm input {
+  text-align: center;
+  width: 75%;
+  height: 25px;
+  border: none;
+  color: var(--black);
+  margin-bottom: 10px; /* Adjust space between inputs */
+  border-radius: 10px;
+  font-size: 20px;
+}
+.signUpBox input:focus {
+  outline: none;
+}
+
+.signUpForm button {
+  margin-top: 10px;
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--black);
+  color: white;
+  font-size: 25px;
+  transition: box-shadow 0.3s ease; /* Adding transition for the box-shadow */
+}
+
+.signUpForm button:hover {
   cursor: pointer;
   box-shadow: 0 0 8px rgba(41, 41, 41, 0.3);
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.googleBtn {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add other button styles */
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(41, 41, 41, 0.3);
+}
+
+.googleLogo {
+  width: 24px; /* Adjust the width of the Google logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 5px; /* Add some spacing between the image and text */
+  margin-left: 10px;
 }
