@@ -1,6 +1,6 @@
 Finish SignIn Form -- Add Google Logo 
 
-Finish SignUp Form
+Finish SignUp Form 
 
 Finish Authentication 
 
