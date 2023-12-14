@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { auth, googleProvider } from "../config/firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import Navbar from "./Navbar";
+import GoogleLogo from "../images/google_logo.png";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -48,6 +49,7 @@ const SignIn = () => {
 
           <button className="googleBtn" onClick={signInWithGoogle}>
             Sign In With Google
+            <img src={GoogleLogo} className="googleLogo" />
           </button>
         </div>
       </div>

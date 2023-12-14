@@ -1,8 +1,6 @@
-Finish SignIn Form -- Add Google Logo 
-
-Finish SignUp Form 
-
 Finish Authentication 
+
+Make Navbar react to user signed in or not signed in
 
 Finish API
 

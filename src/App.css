@@ -127,6 +127,10 @@ nav a:hover {
   transition: box-shadow 0.3s ease;
 }
 
+.signUp {
+  font-size: 30px;
+}
+
 .signUpBox {
   margin-left: auto;
   margin-right: auto;
