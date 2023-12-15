@@ -1,6 +1,7 @@
-Finish Authentication 
+Finish Authentication -- Figure out provider switching issue
 
 Make Navbar react to user signed in or not signed in
 
 Finish API
 
+Fix Sizing Issues
