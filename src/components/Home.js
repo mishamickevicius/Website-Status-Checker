@@ -1,36 +1,54 @@
-import React from "react";
-import { auth } from "../config/firebase";
-import { signOut } from "firebase/auth";
+import React, { useState } from "react";
+import { auth, db } from "../config/firebase";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import { collection, query, where, limit, getDocs } from "firebase/firestore";
 
-const HomePage = () => {
-  console.log(auth.currentUser);
-  if (auth.currentUser) {
-    // If a user is currently logged in then this HomePage will display
-    return (
+const UserHomePage = () => {
+  const [userData, setUserData] = useState(null);
+  const userDocRef = collection(db, "users");
+  const queryUserData = async () => {
+    try {
+      const q = query(
+        userDocRef,
+        where("userId", "==", auth.currentUser.uid),
+        limit(1)
+      );
+      await getDocs(q);
+      console.log();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  console.log(queryUserData());
+  return (
+    <div className="homeContainer">
+      <Navbar />
       <div className="homePage">
         <h1>Welcome Back {auth?.currentUser.displayName}</h1>
-        <button
-          onClick={() => signOut(auth).then(() => window.location.reload())}
-        >
-          Logout
-        </button>
       </div>
-    );
-  } else {
-    // If no user is logged in then this HomePage will display
-    return (
-      <>
-        <Navbar />
-        <div className="homePage">
-          <h1>Welcome to our website!</h1>
-          <p>Use this website to check the status of a website</p>
-          <Link to="/signup">Get Started Today</Link>
-        </div>
-      </>
-    );
-  }
+    </div>
+  );
+};
+
+const NoUserHomePage = () => {
+  return (
+    <>
+      <Navbar />
+      <div className="homePage">
+        <h1>Welcome to our website!</h1>
+        <p>
+          Use this Webapp to automate the task of checking your business's
+          website status.
+        </p>
+        <Link to="/signup">Get Started Today</Link>
+      </div>
+    </>
+  );
+};
+
+const HomePage = () => {
+  return <>{auth.currentUser ? <UserHomePage /> : <NoUserHomePage />}</>;
 };
 
 export default HomePage;

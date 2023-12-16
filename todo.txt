@@ -1,7 +1,15 @@
-Finish Authentication -- Figure out provider switching issue
+Finish Home Page
 
 Make Navbar react to user signed in or not signed in
 
-Finish API
+Finish API 
+    Add API to full Folder for git
+
+Finish StatusChecker page
+
+Figure out provider switching issue
 
 Fix Sizing Issues
+
+Figure out hosting and version Control
+    Hosting out of github repo

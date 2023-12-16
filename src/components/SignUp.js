@@ -33,6 +33,7 @@ const SignUp = () => {
               userId: cred.user.uid,
               email: cred.user.email,
               username: username,
+              dateCreated: new Date(),
             };
             console.log(payload);
           }
@@ -53,6 +54,7 @@ const SignUp = () => {
           userId: cred.user.uid,
           email: cred.user.email,
           username: cred.user.displayName,
+          dateCreated: new Date(),
         };
       });
       await addDoc(userDocRef, payload).then(console.log("Doc Added"));
