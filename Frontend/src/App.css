@@ -250,3 +250,7 @@ nav a:hover {
     transform: rotate(360deg);
   }
 }
+
+ul {
+  list-style-type: none;
+}

@@ -4,11 +4,11 @@ import requests as rq
 
 # Create your views here.
 
-@api_view(["GET"])
+@api_view(["POST"])
 def get_website_status(request):
     try:
         data = dict(request.data)
-        scan = rq.get(url=data['target_url'][0], timeout=5.0)
+        scan = rq.get(url=data['target_url'], timeout=5.0)
         if int(scan.status_code) >= 200 and int(scan.status_code) < 400:
             result = {"Status": "Up and Working"}
         else:
@@ -19,5 +19,5 @@ def get_website_status(request):
         "is_alive": True,
         "target":data['target_url'],
         "response_code":scan.status_code,
-        "result": result
+        "result": result["Status"]
     })
