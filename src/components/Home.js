@@ -3,9 +3,11 @@ import { auth, db } from "../config/firebase";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import { collection, query, where, limit, getDocs } from "firebase/firestore";
+import Loading from "./Loading";
 
 const UserHomePage = () => {
   const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const userDocRef = collection(db, "users");
 
   useEffect(() => {
@@ -21,12 +23,22 @@ const UserHomePage = () => {
         queryResults.forEach((doc) => {
           setUserData(doc.data());
         });
+
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
       } catch (err) {
         console.log(err);
+        setLoading(false);
       }
     };
     queryUserData();
   }, []);
+
+  if (loading) {
+    // Return the loading component or loading screen here
+    return <Loading />;
+  }
 
   return (
     <div className="homeContainer">
