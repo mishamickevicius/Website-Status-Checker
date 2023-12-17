@@ -212,3 +212,41 @@ nav a:hover {
   margin-right: 5px; /* Add some spacing between the image and text */
   margin-left: 10px;
 }
+
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Set a higher z-index to ensure it appears above other elements */
+}
+
+.loaderContainer span {
+  margin-top: 20px; /* Add some space between loader and text */
+  color: var(--gold); /* Text color */
+  font-size: 30px; /* Adjust font size */
+}
+
+.loader {
+  border: 16px solid; /* Light grey */
+  border-top: 16px solid var(--black); /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

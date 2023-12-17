@@ -1,7 +1,3 @@
-Add Loading effect
-
-Make Navbar react to user signed in or not signed in
-
 Finish API 
     Add API to full Folder for git
 

@@ -44,8 +44,8 @@ const UserHomePage = () => {
     <div className="homeContainer">
       <Navbar />
       <div className="homePage">
-        <h1>Welcome Back {userData ? userData.username : "No User Data"}</h1>
-        <Link to="/status">Start Tests</Link>
+        <h1>Welcome {userData ? userData.username : "No User Data"}</h1>
+        <Link to="/status">Start Testing</Link>
       </div>
     </div>
   );
