@@ -1,11 +1,11 @@
-Finish API 
-    Add API to full Folder for git
-
 Finish StatusChecker page
-
-Figure out provider switching issue
-
-Fix Sizing Issues
 
 Figure out hosting and version Control
     Hosting out of github repo
+
+
+
+
+Version 2 stuff:
+    Figure out provider switching issue
+    Fix Sizing Issues
