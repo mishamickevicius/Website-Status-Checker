@@ -1,4 +1,4 @@
-Finish Home Page
+Add Loading effect
 
 Make Navbar react to user signed in or not signed in
 
