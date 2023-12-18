@@ -292,7 +292,7 @@ ul {
   border-radius: 10px;
   font-size: 20px;
 }
-.signUpBox input:focus {
+.statuscheckerForm input:focus {
   outline: none;
 }
 
