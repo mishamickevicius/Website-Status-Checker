@@ -3,13 +3,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAt1sDJ7DpuPlmFd7DDUbauAdfh0t1bBdo",
-  authDomain: "website-status-checker-408108.firebaseapp.com",
-  projectId: "website-status-checker-408108",
-  storageBucket: "website-status-checker-408108.appspot.com",
-  messagingSenderId: "1008559792412",
-  appId: "1:1008559792412:web:4c0ed2e591ed6dbbb31ad9",
-  measurementId: "G-CDJV9JBES4",
+  apiKey: "AIzaSyCYG2GRuMXXwu9pWXeBmd4wQsEcPqD75_Q",
+  authDomain: "website-status-checker-v1.firebaseapp.com",
+  projectId: "website-status-checker-v1",
+  storageBucket: "website-status-checker-v1.appspot.com",
+  messagingSenderId: "557550734846",
+  appId: "1:557550734846:web:363d924ce5401f7e1c84af",
+  measurementId: "G-PSB1EWE53F",
 };
 
 const app = initializeApp(firebaseConfig);
