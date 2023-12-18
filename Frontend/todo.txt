@@ -1,5 +1,3 @@
-Finish StatusChecker page
-
 Figure out hosting and version Control
     Hosting out of github repo
 

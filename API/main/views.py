@@ -10,7 +10,7 @@ def get_website_status(request):
         data = dict(request.data)
         scan = rq.get(url=data['target_url'], timeout=5.0)
         if int(scan.status_code) >= 200 and int(scan.status_code) < 400:
-            result = {"Status": "Up and Working"}
+            result = {"Status": "Up and Running"}
         else:
             result = {"Status": "Down or Not Responding"}
     except:

@@ -47,8 +47,8 @@ const StatusChecker = () => {
       <div className="App-statuschecker">
         <Navbar />
         <h1>Status Checker</h1>
-        <div className="statuscheckerForm">
-          <form onSubmit={statusAPICall}>
+        <div className="statuscheckerBox">
+          <form onSubmit={statusAPICall} className="statuscheckerForm">
             <label>Enter Target URL: </label>
             <input
               type="text"
@@ -60,13 +60,13 @@ const StatusChecker = () => {
             <button type="submit">Start Scan</button>
           </form>
           {errorMessage && <p className="error">{errorMessage}</p>}
+        </div>
+        <div className="resultsBox">
+          <h2>Scan Results:</h2>
           {results ? (
             <>
-              <h2>Scan Results:</h2>
-              <ul>
-                <li>Response Code: {results["response_code"]}</li>
-                <li>Result: {results["result"]}</li>
-              </ul>
+              <p>Result: {results["result"]}</p>
+              <p>Response Code: {results["response_code"]}</p>
             </>
           ) : (
             <></>
