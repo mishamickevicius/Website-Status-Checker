@@ -292,7 +292,7 @@ ul {
   border-radius: 10px;
   font-size: 20px;
 }
-.statuscheckerForm input:focus {
+.statuscheckerBox input:focus {
   outline: none;
 }
 
