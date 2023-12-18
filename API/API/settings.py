@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
 # CORS Allowed origins list
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://website-status-checker-v1.web.app"
     # Add other origins as needed
 ]
 
