@@ -30,42 +30,38 @@ const SignIn = () => {
     }
   };
 
-  if (auth.currentUser) {
-    return (
-      <>
-        {successfulSignUp ? <Navigate to="/" /> : <></>}
-        <Navbar />
-        <div className="signIn">
-          <h2>Sign In</h2>
-          <div className="signInBox">
-            <form className="signInForm" onSubmit={signIn}>
-              <label>Email: </label>
-              <input
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <label>Password: </label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-              <button type="submit">Sign In</button>
-            </form>
+  return (
+    <>
+      {successfulSignUp ? <Navigate to="/" /> : <></>}
+      <Navbar />
+      <div className="signIn">
+        <h2>Sign In</h2>
+        <div className="signInBox">
+          <form className="signInForm" onSubmit={signIn}>
+            <label>Email: </label>
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <label>Password: </label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button type="submit">Sign In</button>
+          </form>
 
-            <button className="googleBtn" onClick={signInWithGoogle}>
-              Sign In With Google
-              <img src={GoogleLogo} className="googleLogo" alt="Google Logo" />
-            </button>
-          </div>
+          <button className="googleBtn" onClick={signInWithGoogle}>
+            Sign In With Google
+            <img src={GoogleLogo} className="googleLogo" alt="Google Logo" />
+          </button>
         </div>
-      </>
-    );
-  } else {
-    return <Navigate to="/" replace />;
-  }
+      </div>
+    </>
+  );
 };
 
 export default SignIn;

@@ -64,57 +64,53 @@ const SignUp = () => {
     }
   };
 
-  if (auth.currentUser) {
-    return (
-      <>
-        {successfulSignUp ? <Navigate to="/" /> : <></>}
-        <Navbar />
-        <div className="signUp">
-          <h1>Sign Up</h1>
-          <div className="signUpBox">
-            <form className="signUpForm" onSubmit={createAccount}>
-              <label>Email: </label>
-              <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />{" "}
-              <label>Username: </label>
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
-              />
-              <label>Password: </label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-              <label>Confirm Password: </label>
-              <input
-                type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                required
-              />
-              {errorMessage && <p className="error">{errorMessage}</p>}
-              <button type="submit">Create Account</button>
-            </form>
-            <button className="googleBtn" onClick={createAccountWithGoogle}>
-              Sign Up With Google
-              <img src={GoogleLogo} className="googleLogo" alt="Google Logo" />
-            </button>
-          </div>
+  return (
+    <>
+      {successfulSignUp ? <Navigate to="/" /> : <></>}
+      <Navbar />
+      <div className="signUp">
+        <h1>Sign Up</h1>
+        <div className="signUpBox">
+          <form className="signUpForm" onSubmit={createAccount}>
+            <label>Email: </label>
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />{" "}
+            <label>Username: </label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+            <label>Password: </label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <label>Confirm Password: </label>
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+            {errorMessage && <p className="error">{errorMessage}</p>}
+            <button type="submit">Create Account</button>
+          </form>
+          <button className="googleBtn" onClick={createAccountWithGoogle}>
+            Sign Up With Google
+            <img src={GoogleLogo} className="googleLogo" alt="Google Logo" />
+          </button>
         </div>
-      </>
-    );
-  } else {
-    return <Navigate to="/" replace />;
-  }
+      </div>
+    </>
+  );
 };
 
 export default SignUp;
